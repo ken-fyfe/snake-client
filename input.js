@@ -8,17 +8,17 @@ const handleUserInput = function() {
     if (key === '\u0003') { // \u0003 maps to ctrl+c input
       process.exit();
     } else if (key === 'w') {
-      // console.log('pressed the "w" key');
       connection.write('Move: up');
     } else if (key === 'a') {
-      // console.log('pressed the "a" key');
       connection.write('Move: left');
     } else if (key === 's') {
-      // console.log('pressed the "s" key');
       connection.write('Move: down');
     } else if (key === 'd') {
-      // console.log('pressed the "d" key');
       connection.write('Move: right');
+    } else if (key === 'l') {
+      connection.write('Say: UR freaking loser!');
+    } else if (key === 'g') {
+      connection.write('Say: Good Luck!');
     }
   });
 };
