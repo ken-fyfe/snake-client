@@ -14,8 +14,27 @@ const connect = function() {
   });
 
   conn.on('connect', () => {
-    conn.write('Name: KRF');
     console.log('Successfully connected to game server');
+    conn.write('Name: KRF');
+  });
+
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server');
+    conn.write('Name: KRF');
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 1000);
+    // setTimeout(() => {
+    //   conn.write('Move: left');
+    // }, 2000);
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 3000);
+    // setTimeout(() => {
+    //   setInterval(() => {
+    //     conn.write('Move: right');
+    //   }, 100);
+    // }, 4000);
   });
 
   return conn;
